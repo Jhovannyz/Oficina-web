@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(85, 89, 92);
+}
+
+img {
+    height: 400px;
+}
+
+P {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.audiodiv {
+    text-align: center;
+}
+
+.imgflamengo {
+    text-align: center;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+ul.menu li {
+    float: left;
+} 
+ul.menu li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition:background-color 0.3s;
+}
+
+.divlista{
+    height: 120px;
+}

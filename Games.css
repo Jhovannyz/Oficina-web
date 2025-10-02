@@ -1,0 +1,144 @@
+body {
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: rgba(120, 35, 4, 0.051);
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    /* Espaço interno para não ficar grudado */
+}
+
+
+nav ul {
+    list-style: none;
+    /* Remove bolinhas */
+    display: flex;
+    /* Itens em linha */
+    justify-content: center;
+    margin: 0;
+    /* Sem margem */
+    padding: 0;
+    /* Sem espaçamento */
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    /* Necessário pro efeito da linha */
+}
+
+/* Linha animada ao passar o mouse */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 0%;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    /* Linha cresce até preencher */
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    /* Cor ao passar o mouse */
+}
+
+h1 {
+    color: #ffcc00;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: flex;
+    /* Layout flex */
+    flex-wrap: wrap;
+    /* Quebra linha */
+    justify-content: center;
+    /* Centraliza */
+    margin: 30px auto;
+    /* Espaço */
+    gap: 25px;
+    /* Espaço entre cards */
+    max-width: 1200px;
+    /* Largura máx */
+}
+
+.card {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(53, 53, 53, 0.7);
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 25px rgb(34, 3, 96);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    color: #4CAF50;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #4CAF50, #2e8b57);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 1px 15px rgba(7, 197, 7, 0.6);
+}
+
+footer {
+    background: #0f0f0f;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    color: #bbb;
+}
